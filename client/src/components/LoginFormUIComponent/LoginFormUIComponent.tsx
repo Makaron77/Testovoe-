@@ -15,9 +15,7 @@ export const description =
 	"A simple login form with email and password. The submit button says 'Sign in'.";
 
 export function LoginForm() {
-	const { formData, error, handleChange, handleSubmit } = useLogin();
-
-	
+	const { formData, handleChange, handleSubmit } = useLogin();
 
 	return (
 		<Card className='w-full max-w-sm'>
@@ -50,7 +48,7 @@ export function LoginForm() {
 							onChange={handleChange}
 						/>
 					</div>
-					{error && <p className='text-red-500'>{error}</p>}
+
 					<CardFooter>
 						<Button className='w-full' type='submit'>
 							Sign in

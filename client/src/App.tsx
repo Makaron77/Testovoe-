@@ -1,16 +1,26 @@
 import './App.css';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate, useNavigate } from 'react-router-dom';
 import MainPage from './pages/MainPage/MainPage';
-import LoginPage from './pages/LoginPage/LoginPage'
+import LoginPage from './pages/LoginPage/LoginPage';
+import { useAuth } from './hooks/useAuth';
 
 function App() {
+	const auth = useAuth();
+
 	return (
-		<>
-			<Routes>
-				<Route path='/' element={<MainPage />} />
-				<Route path='/login' element={<LoginPage/>}></Route>
-			</Routes>
-		</>
+		<Routes>
+			{auth ? (
+				<>
+					<Route path='/' element={<MainPage />} />
+					<Route path='*' element={<Navigate to='/' />} />{' '}
+				</>
+			) : (
+				<>
+					<Route path='/login' element={<LoginPage />} />
+					<Route path='*' element={<Navigate to='/login' />} />{' '}
+				</>
+			)}
+		</Routes>
 	);
 }
 

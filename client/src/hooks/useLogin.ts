@@ -1,11 +1,15 @@
-import { useState } from 'react';
-
+import { useContext, useState } from 'react';
+import { message } from 'antd';
 import { LOGIN_MUTATION } from '../graphql/mutations';
 import { client } from '@/graphql/graphqlClient';
+import { useNavigate } from 'react-router-dom';
+import { UserContext } from '@/context/context';
 
 export function useLogin() {
 	const [formData, setFormData] = useState({ email: '', password: '' });
-	const [error, setError] = useState<string | null>(null);
+	const { setAuth } = useContext(UserContext);
+
+	const navigate = useNavigate();
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const { id, value } = e.target;
@@ -19,15 +23,17 @@ export function useLogin() {
 		try {
 			const variables = { email, password };
 			const data = await client.request(LOGIN_MUTATION, variables);
-			console.log('Login successful:', data);
-
+			console.log('Navigating to /');
+			await setAuth(data.login.access_token);
 			localStorage.setItem('access_token', data.login.access_token);
 			localStorage.setItem('refresh_token', data.login.refresh_token);
+			navigate('/')
 		} catch (error) {
-			setError('Login failed');
-			console.error('Error logging in:', error);
+
+			message.error('Login failed');
+	
 		}
 	};
 
-	return { formData, error, handleChange, handleSubmit };
+	return { formData, handleChange, handleSubmit };
 }

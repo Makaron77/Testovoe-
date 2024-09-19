@@ -1,11 +1,14 @@
 
-import React, { createContext, ReactNode, useRef, useState } from 'react';
+import React, { createContext, ReactNode, useState } from 'react';
 
 interface UserContextType {
-
+	auth: string;
+	setAuth: (item: string) => void;
 }
 
 export const UserContext = createContext<UserContextType>({
+	auth: '',
+	setAuth: () => { },
 
 });
 
@@ -14,7 +17,7 @@ interface UserAppContextProps {
 }
 
 export const UserAppContext = ({ children }: UserAppContextProps) => {
-
+const [auth, setAuth] = useState('')
 
 
 
@@ -22,7 +25,7 @@ export const UserAppContext = ({ children }: UserAppContextProps) => {
 
 	return (
 		<UserContext.Provider
-			value={{}}
+			value={{auth, setAuth}}
 		>
 			{children}
 		</UserContext.Provider>
