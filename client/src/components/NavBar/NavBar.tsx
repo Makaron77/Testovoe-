@@ -1,30 +1,65 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import styles from './NavBar.module.scss';
-import { listData } from './navData';
+import { listData, toolsData } from './navData';
+import BurgerMenuComponent from '../BurgerMenuComponent/BurgerMenuComponent';
+import { UserContext } from '@/context/context';
+import { Link } from 'react-router-dom';
 export default function NavBar() {
+	const { burgerActiveMenu, setBurgerActiveMenu } = useContext(UserContext);
+	const [isFocusedInput, setIsFocusedInput] = useState(false);
+	const [activeItem, setActiveItem] = useState(null);
+	const handleItemClick = (id) => {
+		setActiveItem(id); 
+	};
+
 	return (
 		<article className={styles.container}>
 			<section className={styles.logo}>HarmonyHR</section>
 			<section className={styles.list}>
 				<ul>
 					{listData.map(item => (
-						<li key={item.id}>{item.text}</li>
+						<Link
+							to={item.to}
+							className={activeItem === item.id ? styles.activeItem : ''}
+							onClick={() => handleItemClick(item.id)}
+							key={item.id}
+						>
+							{item.text}
+						</Link>
 					))}
 				</ul>
 			</section>
 			<section className={styles.search}>
-				<input type='text' />
-				<div className={styles.searchElement}>
-					<img src='images/search.svg' alt='search' />
-					<p>Search</p>
-				</div>
+				<input
+					type='text'
+					onFocus={() => setIsFocusedInput(true)}
+					onBlur={() => setIsFocusedInput(false)}
+				/>
+				{!isFocusedInput && (
+					<div className={styles.searchElement}>
+						<img src='images/search.svg' alt='search' />
+						<p>Search</p>
+					</div>
+				)}
 			</section>
 			<section className={styles.tools}>
-				<img src='images/iconTools1.svg' alt='iconTools1' />
-				<img src='images/iconTools2.svg' alt='iconTools2' />
-				<img src='images/iconTools3.svg' alt='iconTools3' />
-				<img src='images/avatarTools.svg' alt='avatarTools' />
-				<img src='images/burgerMenu.svg' alt='burgerMenu' />
+				{toolsData.map(tools => (
+					<img
+						className={styles.toolsItem}
+						key={tools.id}
+						src={tools.src}
+						alt={tools.alt}
+					></img>
+				))}
+				<img
+					className={styles.toolsItem}
+					onClick={() => setBurgerActiveMenu(!burgerActiveMenu)}
+					src='images/burgerMenu.svg'
+					alt='burgerMenu'
+				/>
+				<section className={styles.burgerComponent}>
+					<BurgerMenuComponent />
+				</section>
 			</section>
 		</article>
 	);

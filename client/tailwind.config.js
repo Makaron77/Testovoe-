@@ -9,8 +9,11 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)',
 			},
+			fontFamily: {
+				inter: ['Inter', 'sans-serif'],
+			},
 			colors: {
-				'blue-bg': '#DAE6F2',
+				'color1': 'rgba(218, 230, 242, 1)',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				card: {

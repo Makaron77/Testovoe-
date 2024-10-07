@@ -1,129 +1,156 @@
 .container {
-	font-family: 'Inter', sans-serif;
-	color: black;
-	padding: 32px 24px 0 24px;
-	display: flex;
-	justify-content: space-between;
-	height: 85px;
-	gap: 30px;
-	border-bottom: 1px solid black;
+  font-family: 'Inter', sans-serif;
+  color: black;
+  padding-top: 2rem; 
+  padding-left: 1.5rem;
+  padding-right: 1.5rem; 
+  padding-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  height: 85px;
+  gap: 30px;
+	section:last-child {
+    margin-right: 0;
+  }
 
-	.logo {
-		font-size: 20px;
-		font-weight: 600;
-	}
-	.list {
-		ul {
-			display: flex;
+  .logo {
+    font-size: 20px;
+    font-weight: 600;
+  }
 
-			li {
-				font-size: 18px;
-				padding: 13px;
-				/* text-align: center; */
-				/* &:active {
-					border-radius: 8px 8px 0px 0px;
-					background-color: #dae6f2;
-				} */
-				&:hover {
-					border-radius: 8px 8px 0px 0px;
-					background-color: #dae6f2;
-					cursor: pointer;
-				}
-			}
-		}
-	}
-	.search {
-		position: relative;
-		max-height: 38px;
-		max-width: 450px;
-		min-width: 130px;
-		flex: 1;
-		display: flex;
-		justify-content: center;
-		input {
-			width: 100%;
-			flex: 1;
-			padding: 5px 16px;
-			border-radius: 12px;
-			border: 1px solid black;
-		}
-		.searchElement {
-			display: flex;
-			position: absolute;
-			left: 22px;
-			top: 6px;
+  .list {
+    ul {
+      display: flex;
 
-			img {
-				padding-right: 5%;
-			}
-		}
-	}
-	.tools {
-		display: flex;
-		align-items: center;
-		height: 38px;
-		gap: 24px;
-		img {
-			width: 24px;
-			height: 24px;
+      a {
+        font-size: 18px;
+        padding: 13px;
+        cursor: pointer;
+        
+        &:hover {
+          background-color: #dae6f2;
+         border-radius: 8px 8px 0px 0px;
+        }
+				&.activeItem {
+          background-color: #dae6f2;
+         border-radius: 8px 8px 0px 0px;
+        }
+      }
+    }
+  }
 
-			&:nth-child(4) {
-				width: 38px;
-				height: 38px;
-			}
-			&:nth-child(5) {
-				display: none;
-			}
-		}
-	}
-}
+  .search {
+    position: relative;
+    max-height: 38px;
+    max-width: 450px;
+    min-width: 130px;
+    display: flex;
+    justify-content: center;
+    flex: 1;
 
-@media (max-width: 1040px) {
-	.container {
-		.search {
+
+    input {
+      width: 100%;
+      flex: 1;
+      padding: 2.5px 1rem; 
+      border-radius: 0.5rem;
+      border: 1px solid black;
 		
-			input {
-				padding: 5px 0px;
-			}
-		}
-		.tools {
-			img {
-				&:nth-child(-n + 3) {
-					display: none;
-				}
-				&:nth-child(5) {
-					display: block;
-				}
-			}
-		}
-	}
+    }
+
+    .searchElement {
+      display: flex;
+      position: absolute;
+      left: 22px;
+      top: 6px;
+
+      img {
+        padding-right: 5%;
+      }
+    }
+  }
+
+  .tools {
+    display: flex;
+    align-items: center;
+    height: 38px;
+    gap: 1.5rem; 
+
+    img {
+      width: 24px; 
+      height: 24px; 
+
+      &:nth-child(4) {
+        width: 38px;
+        height: 38px;
+      }
+
+      &:nth-child(5) {
+        display: none;
+
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+
+      &:nth-child(-n + 3) {
+        &:active {
+          transform: scale(0.95);
+        }
+      }
+    }
+  }
 }
 
-@media (max-width: 950px) {
-	.container {
-		.list {
-			display: none;
-		}
-		.search {
-			max-width: 250px;
-		}
-	}
+
+@media (max-width: 1080px) {
+  .container {
+    .search {
+      input {
+        padding: 0;
+      }
+    }
+
+    .tools {
+		
+      .toolsItem {
+        &:nth-child(-n + 3) {
+          display: none;
+        }
+
+        &:nth-child(5) {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 980px) {
+  .container {
+    .list {
+      display: none;
+    }
+
+    .search {
+      max-width: 250px;
+    }
+  }
 }
 
 @media (max-width: 450px) {
-	.container {
-		.search {
-		min-width: 50px ;
-			.searchElement {
-				top: 30%;
-				left: 16px;
-				img {
-				}
+  .container {
+    .search {
+      min-width: 50px;
 
-				p {
-					display: none;
-				}
-			}
-		}
-	}
+      .searchElement {
+        top: 30%;
+        left: 16px;
+
+        p {
+          display: none;
+        }
+      }
+    }
+  }
 }
