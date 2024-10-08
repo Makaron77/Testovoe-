@@ -55,7 +55,7 @@
 			width: 100%;
 			flex: 1;
 			padding: 2.5px 1rem;
-			border-radius: 0.5rem;
+			border-radius: 12px;
 			border: 1px solid black;
 		}
 
@@ -77,41 +77,35 @@
 		height: 38px;
 		gap: 1.5rem;
 .containerAvatar {
-	width: 38px;
+	width: 100%;
 	height: 38px;
 	display: flex;
-	justify-content: center;
+justify-content: flex-start;
 	align-items: center;
-	img{
-		width: 38px;
+	
+.avatar {
+		width: 7 0px;
 	height: 38px;
+	
+	/* position: relative; */
+	img{
+		/* border-radius: 50% !important; */
 	}
+}}
 
+.toolsItem {
+	&:active {
+					transform: scale(0.95);
+				}
 }
-		img {
-			width: 24px;
-			height: 24px;
-			border-radius: 50%;
-
-			&:nth-child(4) {
-				width: 38px;
-				height: 38px;
-			}
-
-			&:nth-child(5) {
-				display: none;
+.burgerIcon{
+	display: none;
 
 				&:active {
 					transform: scale(0.95);
 				}
-			}
+}
 
-			&:nth-child(-n + 3) {
-				&:active {
-					transform: scale(0.95);
-				}
-			}
-		}
 	}
 }
 
