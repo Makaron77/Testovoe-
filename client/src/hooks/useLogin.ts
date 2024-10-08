@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import { message } from 'antd';
-import { LOGIN_MUTATION } from '../graphql/mutations';
+import { LoginMutation } from '../graphql/mutations';
 import { client } from '@/graphql/graphqlClient';
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from '@/context/context';
@@ -22,12 +22,12 @@ export function useLogin() {
 
 		try {
 			const variables = { email, password };
-			const data = await client.request(LOGIN_MUTATION, variables);
-			console.log('Navigating to /');
+			const data = await client.request(LoginMutation, variables);
+	
 			await setAuth(data.login.access_token);
 			localStorage.setItem('access_token', data.login.access_token);
 			localStorage.setItem('refresh_token', data.login.refresh_token);
-			navigate('/')
+			navigate('/home')
 		} catch (error) {
 
 			message.error('Login failed');

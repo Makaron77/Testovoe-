@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/uiShadcn/button';
 import {
 	Card,
 	CardContent,
@@ -6,10 +6,11 @@ import {
 	CardFooter,
 	CardHeader,
 	CardTitle,
-} from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
+} from '@/components/ui/uiShadcn/card';
+
+import { Label } from '@/components/ui/uiShadcn/label';
 import { useLogin } from '@/hooks/useLogin';
+import { Input } from '../ui/uiShadcn/input';
 
 export const description =
 	"A simple login form with email and password. The submit button says 'Sign in'.";

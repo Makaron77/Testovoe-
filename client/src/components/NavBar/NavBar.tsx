@@ -1,15 +1,24 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import styles from './NavBar.module.scss';
 import { listData, toolsData } from './navData';
 import BurgerMenuComponent from '../BurgerMenuComponent/BurgerMenuComponent';
 import { UserContext } from '@/context/context';
 import { Link } from 'react-router-dom';
+import { Col, Spin } from 'antd';
+import { LoadingOutlined } from '@ant-design/icons';
+
 export default function NavBar() {
 	const { burgerActiveMenu, setBurgerActiveMenu } = useContext(UserContext);
 	const [isFocusedInput, setIsFocusedInput] = useState(false);
-	const [activeItem, setActiveItem] = useState(null);
-	const handleItemClick = (id) => {
-		setActiveItem(id); 
+	const [activeItem, setActiveItem] = useState(
+		sessionStorage.getItem('activeItem') || '1',
+	);
+	const { userData, setUserData } = useContext(UserContext);
+
+
+	const handleItemClick = id => {
+		sessionStorage.setItem('activeItem', id);
+		setActiveItem(id);
 	};
 
 	return (
@@ -49,8 +58,18 @@ export default function NavBar() {
 						key={tools.id}
 						src={tools.src}
 						alt={tools.alt}
-					></img>
+					/>
 				))}
+				<div className={styles.containerAvatar}>
+					{userData.avatar ? (
+						<img src={userData.avatar} alt='avatar' />
+					) : (
+						<Col>
+							<Spin indicator={<LoadingOutlined spin />} size='small' />
+						</Col>
+					)}
+				</div>
+
 				<img
 					className={styles.toolsItem}
 					onClick={() => setBurgerActiveMenu(!burgerActiveMenu)}

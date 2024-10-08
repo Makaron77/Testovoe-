@@ -1,0 +1,46 @@
+.container {
+	height: 185px;
+	width: 100%;
+	background-color: #dae6f2;
+	display: flex;
+	padding: 0 6%;
+	gap: 25px;
+	.photo {
+		width: 225px;
+		height: 185px;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		img {
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+		}
+	}
+	.right {
+		padding-top: 65px;
+		width: 100%;
+		.nameAndSettings {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			.nameBlock {
+				p {
+					font-size: 28px;
+					font-weight: 600;
+					font-family: Inter, sans-serif;
+				}
+				.uiSkeleton {
+					width: 150px;
+					ul {
+						li {
+							height: 30px;
+						}
+					}
+				}
+			}
+			.settingsBlock {
+			}
+		}
+	}
+}
