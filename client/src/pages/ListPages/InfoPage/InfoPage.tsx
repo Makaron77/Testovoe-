@@ -1,5 +1,5 @@
-import React, { useContext, useState } from 'react'
-import styles from './InfoPage.module.scss'
+import React, { useContext, useState } from 'react';
+import styles from './InfoPage.module.scss';
 import { UserContext } from '@/context/context';
 import { Col, Skeleton, Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
@@ -7,19 +7,25 @@ import { InputSelectUIComponent } from '@/components/InputSelectUIComponent/Inpu
 export default function InfoPage() {
 	const { userData, setUserData } = useContext(UserContext);
 
-
-
 	return (
 		<article className={styles.container}>
-			<section className={styles.photo}>
-				{userData.avatar ? (
-					<img src={userData.avatar} alt='avatar' />
-				) : (
-					<Col>
-						<Spin indicator={<LoadingOutlined spin />} size='large' />
-					</Col>
-				)}
-			</section>
+	
+				<div className={styles.photo}>
+					{userData.avatar ? (
+					
+							<img src={userData.avatar} alt='avatar' />
+						
+					) : (
+						<Col className={styles.col}>
+							<Spin
+								className={styles.spin}
+								indicator={<LoadingOutlined spin />}
+								size='large'
+							/>
+						</Col>
+					)}
+				</div>
+		
 
 			<section className={styles.right}>
 				<div className={styles.nameAndSettings}>
@@ -36,7 +42,9 @@ export default function InfoPage() {
 						)}
 					</div>
 					<div className={styles.settingsBlock}>
-						<div className={styles.request}><InputSelectUIComponent/></div>
+						<div className={styles.request}>
+							<InputSelectUIComponent />
+						</div>
 					</div>
 				</div>
 			</section>
