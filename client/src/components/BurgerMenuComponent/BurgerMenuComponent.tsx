@@ -14,10 +14,9 @@ import { Link } from 'react-router-dom';
 				<div onClick={e => e.stopPropagation()} className={styles.menuContent}>
 					<section className={`${styles.toolsBurger}`}>
 						{toolsData.slice(0, 3).map(tools => (
-							<Link to={tools.to} className={` ${styles.toolsItem} `}>
+							<Link to={tools.to} key={tools.id} className={` ${styles.toolsItem} `}>
 								<img
 									// className={` ${styles.toolsItem} `}
-									key={tools.id}
 									src={tools.src}
 									alt={tools.alt}
 								></img>
