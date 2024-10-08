@@ -23,11 +23,11 @@ export function useLogin() {
 		try {
 			const variables = { email, password };
 			const data = await client.request(LoginMutation, variables);
-			console.log('Navigating to /');
+	
 			await setAuth(data.login.access_token);
 			localStorage.setItem('access_token', data.login.access_token);
 			localStorage.setItem('refresh_token', data.login.refresh_token);
-			navigate('/')
+			navigate('/home')
 		} catch (error) {
 
 			message.error('Login failed');

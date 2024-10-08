@@ -7,6 +7,7 @@ import { UserQuery } from '@/graphql/mutations';
 export function useAuth() {
 	const { auth, setAuth, userData, setUserData } = useContext(UserContext);
 
+
 	useEffect(() => {
 		const storedToken = localStorage.getItem('access_token');
 		if (storedToken) {
@@ -21,7 +22,7 @@ export function useAuth() {
 				
 					const data = await client.request(UserQuery);
 					setUserData(data.myProfile);
-					console.log('данные профиля', data.myProfile);
+	
 				} catch (error) {
 					console.error('Ошибка при получении данных профиля:', error);
 				}

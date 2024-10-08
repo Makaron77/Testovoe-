@@ -1,31 +1,31 @@
 export const listData = [
 	{
-		id: 1,
+		id: '1',
 		text: 'Home',
 		to: 'home',
 	},
 	{
-		id: 2,
+		id: '2',
 		text: 'My info',
 		to: 'info',
 	},
 	{
-		id: 3,
+		id: '3',
 		text: 'People',
 		to: 'people',
 	},
 	{
-		id: 4,
+		id: '4',
 		text: 'Hiring',
 		to: 'hiring',
 	},
 	{
-		id: 5,
+		id: '5',
 		text: 'Reports',
 		to: 'reports',
 	},
 	{
-		id: 6,
+		id: '6',
 		text: 'Files',
 		to: 'files',
 	},
@@ -48,9 +48,5 @@ export const toolsData = [
 		src: 'images/iconTools3.svg',
 		alt: 'iconTools3',
 	},
-	{
-		id: 4,
-		src: 'images/avatarTools.svg',
-		alt: 'avatarTools',
-	},
+
 ];

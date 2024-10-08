@@ -1,10 +1,11 @@
+import { IUser } from '@/types/styles';
 import React, { createContext, ReactNode, useState } from 'react';
 
 interface UserContextType {
 	auth: string;
 	setAuth: (item: string) => void;
-	userData: object;
-	setUserData: (object: object) => void;
+	userData: IUser;
+	setUserData: (user: IUser) => void;
 	burgerActiveMenu: boolean;
 	setBurgerActiveMenu: (value: boolean) => void;
 }
@@ -12,7 +13,7 @@ interface UserContextType {
 export const UserContext = createContext<UserContextType>({
 	auth: '',
 	setAuth: () => {},
-	userData: {},
+	userData: { id: '', name: '', avatar: '' },
 	setUserData: () => {},
 	burgerActiveMenu: false,
 	setBurgerActiveMenu: () => {},
@@ -23,8 +24,8 @@ interface UserAppContextProps {
 }
 
 export const UserAppContext = ({ children }: UserAppContextProps) => {
-	const [auth, setAuth] = useState('');
-	const [userData, setUserData] = useState({
+	const [auth, setAuth] = useState<string>('');
+	const [userData, setUserData] = useState<IUser>({
 		id: '',
 		name: '',
 		avatar: '',
