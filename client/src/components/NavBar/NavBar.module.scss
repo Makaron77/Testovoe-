@@ -29,7 +29,7 @@
 				cursor: pointer;
 
 				&:hover {
-					background-color: #dae6f2;
+					background-color: rgba(228, 236, 243, 0.8);
 					border-radius: 8px 8px 0px 0px;
 				}
 				&.activeItem {
@@ -119,12 +119,10 @@
 		.tools {
 			.toolsItem {
 				display: none;
-
-				
 			}
 			.burgerIcon {
-					display: block;
-				}
+				display: block;
+			}
 		}
 	}
 }
