@@ -44,9 +44,9 @@ export const infoPageData = [
 		text: 'Assets',
 		to: 'assets',
 	},
-	{
-		id: '10',
-		text: 'More',
-		to: 'more',
-	},
+	// {
+	// 	id: '10',
+	// 	text: 'More',
+	// 	to: 'more',
+	// },
 ];
