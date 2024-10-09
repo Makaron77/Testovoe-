@@ -34,19 +34,17 @@ export const listData = [
 export const toolsData = [
 	{
 		id: 1,
-		src: 'images/iconTools1.svg',
+		src: '/images/iconTools1.svg',
 		alt: 'iconTools1',
 	},
 	{
 		id: 2,
-		src: 'images/iconTools2.svg',
+		src: '/images/iconTools2.svg',
 		alt: 'iconTools2',
-	
 	},
 	{
 		id: 3,
-		src: 'images/iconTools3.svg',
+		src: '/images/iconTools3.svg',
 		alt: 'iconTools3',
 	},
-
 ];

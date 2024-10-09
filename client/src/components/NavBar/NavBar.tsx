@@ -16,6 +16,8 @@ export default function NavBar() {
 	);
 	const { userData, setUserData } = useContext(UserContext);
 
+// console.log(toolsData.map((el) => el));
+
 
 	const handleItemClick = id => {
 		sessionStorage.setItem('activeItem', id);
@@ -47,7 +49,7 @@ export default function NavBar() {
 				/>
 				{!isFocusedInput && (
 					<div className={styles.searchElement}>
-						<img src='images/search.svg' alt='search' />
+						<img src='/images/search.svg' alt='search' />
 						<p>Search</p>
 					</div>
 				)}
@@ -67,7 +69,6 @@ export default function NavBar() {
 							<ExidAvatarInputAntdComponent />
 						</div>
 					) : (
-						// <img src={userData.avatar} alt='avatar' />
 						<Col className={styles.spin}>
 							<Spin
 								className={styles.spinItem}
