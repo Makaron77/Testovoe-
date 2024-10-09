@@ -36,7 +36,7 @@ export function InputSelectUIComponent() {
 					className={`${styles.settings} w-[76px] rounded-[8px] border border-gray-400 h-[33px]`}
 				>
 					<img
-						src='images/iconTools1.svg'
+						src='/images/iconTools1.svg'
 						alt='Icon'
 						className='mr-1 h-4 w-4'
 					/>
