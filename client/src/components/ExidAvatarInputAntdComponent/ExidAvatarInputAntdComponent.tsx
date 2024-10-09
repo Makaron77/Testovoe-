@@ -29,7 +29,7 @@ const ExidAvatarInputAntdComponent: React.FC = () => {
 			content={
 
 				<div className='flex flex-col space-y-2'>
-					<a onClick={handleLogOut}>Log out</a>
+					<a  onClick={handleLogOut}>Log out</a>
 					<a onClick={hide}>Close</a>
 				</div>
 			}
