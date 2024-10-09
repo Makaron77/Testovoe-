@@ -68,8 +68,12 @@ export default function NavBar() {
 						</div>
 					) : (
 						// <img src={userData.avatar} alt='avatar' />
-						<Col>
-							<Spin indicator={<LoadingOutlined spin />} size='small' />
+						<Col className={styles.spin}>
+							<Spin
+								className={styles.spinItem}
+								indicator={<LoadingOutlined spin />}
+								size='small'
+							/>
 						</Col>
 					)}
 				</div>
