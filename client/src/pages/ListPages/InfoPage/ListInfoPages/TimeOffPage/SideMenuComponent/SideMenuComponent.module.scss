@@ -1,0 +1,95 @@
+.sideMenu {
+	width: 225px;
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	
+	.blockSideMenu {
+		width: 225px;
+		border-radius: 16px;
+		background-color: rgba(252, 252, 254, 1);
+		display: flex;
+		flex-direction: column;
+		padding: 24px;
+	
+	}
+	.blockSideMenuContacts {
+		margin-top: -15px;
+
+		gap: 16px;
+		.phone {
+			display: flex;
+			gap: 8px;
+
+			p {
+			
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+		.message {
+			display: flex;
+			gap: 8px;
+			p {
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+		.contacts {
+			display: flex;
+			gap: 14px;
+			img {
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	.blockSideMenuHireDate {
+
+		h3 {
+			padding-bottom: 16px;
+		}
+		div {
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+		}
+	}
+	.blockSideMenuStatistic {
+		gap: 8px;
+		div {
+			display: flex;
+			gap: 8px;
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}
+	.blockSideMenuReports {
+		h3 {
+			padding-bottom: 16px;
+		}
+
+		.users {
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+			&:hover {
+				cursor: pointer;
+			}
+			div {
+				display: flex;
+				gap: 8px;
+			}
+		}
+	}
+}
+
+@media (max-width: 590px) {
+.sideMenu {
+	display: none;
+}
+}

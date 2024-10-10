@@ -51,7 +51,14 @@ export default function InfoPage() {
 						</div>
 						<div className={styles.settingsBlock}>
 							<div className={styles.request}>
-								<InputSelectUIComponent />
+								<div className={styles.settings}>
+									<InputSelectUIComponent />
+								</div>
+								<img
+									className={styles.trio}
+									src='/images/trio.svg'
+									alt='trio'
+								/>
 							</div>
 						</div>
 					</div>
