@@ -16,7 +16,6 @@ export default function NavBar() {
 	);
 	const { userData, setUserData } = useContext(UserContext);
 
-// console.log(toolsData.map((el) => el));
 
 
 	const handleItemClick = id => {
@@ -82,7 +81,7 @@ export default function NavBar() {
 				<img
 					className={styles.burgerIcon}
 					onClick={() => setBurgerActiveMenu(!burgerActiveMenu)}
-					src='images/burgerMenu.svg'
+					src='/images/burgerMenu.svg'
 					alt='burgerMenu'
 				/>
 				<section className={styles.burgerComponent}>

@@ -1,6 +1,7 @@
 .container{
 	display: flex;
 	gap: 16px;
+	
 .change {
 	svg{
 		width: 25px;
@@ -16,3 +17,10 @@
 		opacity: 100;
 	}
 }}
+@media (max-width:700px) {
+.container {
+	flex-wrap: wrap;
+	gap: 8px;
+	justify-content: flex-end;
+}
+}
