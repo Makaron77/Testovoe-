@@ -114,6 +114,7 @@ padding-top: 50px;
 	gap: 22px;
 .photo {
 	width: 76px;
+	display: block;
 justify-content: flex-start;
 	 padding-top: 24px;
 	 align-items: flex-start;
@@ -132,6 +133,9 @@ justify-content: flex-start;
 
 @media(max-width: 390px) {
 .container {
+	.photo{
+		// position: relative;
+	}
 .right{
 	.nameAndSettings{
 		.settingsBlock{
@@ -144,6 +148,10 @@ justify-content: flex-start;
 				}
 			}
 		}
+	}
+	.navBar{
+// position: absolute;
+left: -93px;
 	}
 }
 }
