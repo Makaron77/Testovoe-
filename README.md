@@ -1,3 +1,6 @@
+[Ссылка на видео-презентацию](https://rutube.ru/video/private/7a8f470fc81f2f785b85dffeabd20ec7/?p=1lc8QfcboSG82xSzgDIDyA)
+
+
 Тестовое задание: Frontend разработчик на
 React.js
 Разработайте React.js приложение в тематике HR-tech. Ваша задача —
