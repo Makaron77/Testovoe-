@@ -14,6 +14,11 @@
   <img src="https://github.com/user-attachments/assets/815c8169-248e-421f-8518-4124b819268c" alt="Изображение 3">
 </details>
 
+Инструкция по запуску проекта локально: 
+  - Клонируем репозиторий
+  - перейти в папку с проектом cd Testovoe-/client
+  - установи зависимости npm i
+  - запусти npm run dev
 
 
 
