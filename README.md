@@ -14,9 +14,7 @@
   <img src="https://github.com/user-attachments/assets/815c8169-248e-421f-8518-4124b819268c" alt="Изображение 3">
 </details>
 
-[изображение1](https://github.com/user-attachments/assets/660cc4ca-1399-48f9-afee-e740d160a9d0)
-[изображение2](https://github.com/user-attachments/assets/b4ba84c9-be85-406a-8ad7-b1ebc643c04e)
-[изображение3](https://github.com/user-attachments/assets/815c8169-248e-421f-8518-4124b819268c)
+
 
 
 Тестовое задание: Frontend разработчик на
