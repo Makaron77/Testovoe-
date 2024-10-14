@@ -110,36 +110,38 @@ export default function TimeOffPage() {
 					</div>
 				</div>
 				<div className={styles.tableBlock}>
-					{Object.entries(tableData).map(([key, values]) => (
-						<div key={key} className={styles.tableColumnBlock}>
-							<div className={styles.bgColorHeader}>
-								{key === 'Date' ? (
-									<p className={`${styles.tableHeader} ${styles.oneHeader}`}>
-										{key}
-										<img src='/images/tableArrow.svg' alt='tableArrow' />
-									</p>
-								) : (
-									<p className={styles.tableHeader}>{key}</p>
-								)}
+					<div className={styles.tableBlock1}>
+						{Object.entries(tableData).map(([key, values]) => (
+							<div key={key} className={styles.tableColumnBlock}>
+								<div className={styles.bgColorHeader}>
+									{key === 'Date' ? (
+										<p className={`${styles.tableHeader} ${styles.oneHeader}`}>
+											{key}
+											<img src='/images/tableArrow.svg' alt='tableArrow' />
+										</p>
+									) : (
+										<p className={styles.tableHeader}>{key}</p>
+									)}
+								</div>
+								<div className={styles.tableItems}>
+									{values.map((value, index) => (
+										<p
+											className={
+												key === 'Date'
+													? `${styles.itemsDate} ${styles.items}`
+													: key === 'Description'
+														? `${styles.itemsDescription} ${styles.items}`
+														: styles.items
+											}
+											key={index}
+										>
+											{value}
+										</p>
+									))}
+								</div>
 							</div>
-							<div className={styles.tableItems}>
-								{values.map((value, index) => (
-									<p
-										className={
-											key === 'Date'
-												? `${styles.itemsDate} ${styles.items}`
-												: key === 'Description'
-													? `${styles.itemsDescription} ${styles.items}`
-													: styles.items
-										}
-										key={index}
-									>
-										{value}
-									</p>
-								))}
-							</div>
-						</div>
-					))}
+						))}
+					</div>
 				</div>
 			</section>
 		</article>
