@@ -1,4 +1,5 @@
-import { LoginForm } from '../../components/LoginFormUIComponent/LoginFormUIComponent';
+
+import { LoginForm } from '@/components/ui/uiShadcn/LoginFormUIComponent/LoginFormUIComponent';
 import React from 'react'
 
 export default function LoginPage() {

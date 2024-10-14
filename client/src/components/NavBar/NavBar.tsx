@@ -6,7 +6,7 @@ import { UserContext } from '@/context/context';
 import { Link } from 'react-router-dom';
 import { Col, Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
-import ExidAvatarInputAntdComponent from '../ExidAvatarInputAntdComponent/ExidAvatarInputAntdComponent';
+import ExidAvatarInputAntdComponent from '../ui/uiAntd/ExidAvatarInputAntdComponent/ExidAvatarInputAntdComponent';
 
 export default function NavBar() {
 	const { burgerActiveMenu, setBurgerActiveMenu } = useContext(UserContext);
@@ -63,19 +63,7 @@ export default function NavBar() {
 					/>
 				))}
 				<div className={styles.containerAvatar}>
-					{userData.avatar ? (
-						<div className={styles.avatar}>
-							<ExidAvatarInputAntdComponent />
-						</div>
-					) : (
-						<Col className={styles.spin}>
-							<Spin
-								className={styles.spinItem}
-								indicator={<LoadingOutlined spin />}
-								size='small'
-							/>
-						</Col>
-					)}
+					<ExidAvatarInputAntdComponent />
 				</div>
 
 				<img

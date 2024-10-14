@@ -1,8 +1,9 @@
 import React, { useContext, useState } from 'react';
-import { Button, Popover } from 'antd';
+import { Button, Col, Popover, Spin } from 'antd';
 import { UserContext } from '@/context/context';
 import styles from './ExidAvatarInputAntdComponent.module.scss'
 import { useNavigate } from 'react-router-dom';
+import { LoadingOutlined } from '@ant-design/icons';
 
 const ExidAvatarInputAntdComponent: React.FC = () => {
 	const [open, setOpen] = useState(false);
@@ -27,9 +28,8 @@ const ExidAvatarInputAntdComponent: React.FC = () => {
 	return (
 		<Popover
 			content={
-
 				<div className='flex flex-col space-y-2'>
-					<a  onClick={handleLogOut}>Log out</a>
+					<a onClick={handleLogOut}>Log out</a>
 					<a onClick={hide}>Close</a>
 				</div>
 			}
@@ -42,7 +42,20 @@ Account management'
 			className={styles.popover}
 		>
 			<Button className={styles.buttonAvatar} type='primary'>
-				<img src={userData.avatar} alt='avatar' />
+				{userData.avatar ? (
+					<div className={styles.avatar}>
+						<img src={userData.avatar} alt='avatar' />
+					</div>
+				) : (
+					<Col className={styles.spin}>
+						<Spin
+							className={styles.spinItem}
+							indicator={<LoadingOutlined spin />}
+							size='small'
+						/>
+					</Col>
+				)}
+
 				<svg
 					width='10'
 					height='7'
