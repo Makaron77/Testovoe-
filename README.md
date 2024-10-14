@@ -1,4 +1,18 @@
 [Ссылка на видео-презентацию](https://rutube.ru/video/private/7a8f470fc81f2f785b85dffeabd20ec7/?p=1lc8QfcboSG82xSzgDIDyA)
+<details>
+  <summary>Изображение 1</summary>
+  <img src="https://github.com/user-attachments/assets/b4ba84c9-be85-406a-8ad7-b1ebc643c04e" alt="Изображение 1">
+</details>
+
+<details>
+  <summary>Изображение 2</summary>
+  <img src="https://github.com/user-attachments/assets/660cc4ca-1399-48f9-afee-e740d160a9d0" alt="Изображение 2">
+</details>
+
+<details>
+  <summary>Изображение 3</summary>
+  <img src="https://github.com/user-attachments/assets/815c8169-248e-421f-8518-4124b819268c" alt="Изображение 3">
+</details>
 
 [изображение1](https://github.com/user-attachments/assets/660cc4ca-1399-48f9-afee-e740d160a9d0)
 [изображение2](https://github.com/user-attachments/assets/b4ba84c9-be85-406a-8ad7-b1ebc643c04e)
