@@ -10,7 +10,8 @@ import {
 
 import { Label } from '@/components/ui/uiShadcn/label';
 import { useLogin } from '@/hooks/useLogin';
-import { Input } from '../ui/uiShadcn/input';
+import { Input } from '../input';
+
 
 export const description =
 	"A simple login form with email and password. The submit button says 'Sign in'.";

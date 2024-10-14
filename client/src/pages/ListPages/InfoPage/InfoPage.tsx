@@ -3,7 +3,7 @@ import styles from './InfoPage.module.scss';
 import { UserContext } from '@/context/context';
 import { Col, Skeleton, Spin } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
-import { InputSelectUIComponent } from '@/components/InputSelectUIComponent/InputSelectUIComponent';
+import { InputSelectUIComponent } from '@/components/ui/uiShadcn/InputSelectUIComponent/InputSelectUIComponent';
 import { Link, Outlet } from 'react-router-dom';
 import { infoPageData } from './infoPageData';
 

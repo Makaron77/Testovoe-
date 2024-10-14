@@ -39,9 +39,9 @@
 		.nameAndSettings {
 			display: flex;
 			justify-content: space-between;
-			width: 100%; 
+			width: 100%;
 			gap: 30px;
-			
+
 			.nameBlock {
 				p {
 					font-size: 28px;
@@ -58,11 +58,11 @@
 				}
 			}
 			.settingsBlock {
-		.request{
-			.trio{
-				display: none;
-			}
-		}
+				.request {
+					.trio {
+						display: none;
+					}
+				}
 			}
 		}
 		.navBar {
@@ -100,59 +100,58 @@
 	}
 }
 
-@media(max-width: 700px) {
+@media (max-width: 700px) {
 	.container {
 		.right {
-padding-top: 50px;
+			padding-top: 50px;
 		}
 	}
 }
 
-@media(max-width: 590px) {
-.container {
+@media (max-width: 590px) {
+	.container {
 		padding: 0 24px;
-	gap: 22px;
-.photo {
-	width: 76px;
-	display: block;
-justify-content: flex-start;
-	 padding-top: 24px;
-	 align-items: flex-start;
-	 
-		img {
-			width: 60px;
-			height: 60px;
-		
+		gap: 22px;
+		.photo {
+			width: 76px;
+			display: block;
+			justify-content: flex-start;
+			padding-top: 24px;
+			align-items: flex-start;
+
+			img {
+				width: 60px;
+				height: 60px;
+			}
+			.col {
+			}
 		}
-		.col {
-		
+		.right {
+			.navBar {
+				left: -93px;
+			}
 		}
 	}
-}
 }
 
-@media(max-width: 390px) {
-.container {
-	.photo{
-		// position: relative;
-	}
-.right{
-	.nameAndSettings{
-		.settingsBlock{
-			.request{
-				.settings{
-					display: none;
-				}
-				.trio{
-					display: block;
+@media (max-width: 390px) {
+	.container {
+		.photo {
+			// position: relative;
+		}
+		.right {
+			.nameAndSettings {
+				.settingsBlock {
+					.request {
+						.settings {
+							display: none;
+						}
+						.trio {
+							display: block;
+						}
+					}
 				}
 			}
 		}
 	}
-	.navBar{
-// position: absolute;
-left: -93px;
-	}
-}
-}
 }
