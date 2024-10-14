@@ -1,9 +1,8 @@
 [Ссылка на видео-презентацию](https://rutube.ru/video/private/7a8f470fc81f2f785b85dffeabd20ec7/?p=1lc8QfcboSG82xSzgDIDyA)
 
-[тестовое1](https://github.com/user-attachments/assets/660cc4ca-1399-48f9-afee-e740d160a9d0)
-[тестовое2](https://github.com/user-attachments/assets/b4ba84c9-be85-406a-8ad7-b1ebc643c04e)
-[тестовое1](https://github.com/user-attachments/assets/660cc4ca-1399-48f9-afee-e740d160a9d0)
-[тестовое](https://github.com/user-attachments/assets/815c8169-248e-421f-8518-4124b819268c)
+[изображение1](https://github.com/user-attachments/assets/660cc4ca-1399-48f9-afee-e740d160a9d0)
+[изображение2](https://github.com/user-attachments/assets/b4ba84c9-be85-406a-8ad7-b1ebc643c04e)
+[изображение3](https://github.com/user-attachments/assets/815c8169-248e-421f-8518-4124b819268c)
 
 
 Тестовое задание: Frontend разработчик на
